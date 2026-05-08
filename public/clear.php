@@ -1,0 +1,11 @@
+<?php
+require __DIR__.'/../vendor/autoload.php';
+$app = require_once __DIR__.'/../bootstrap/app.php';
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+
+\Illuminate\Support\Facades\Artisan::call('config:clear');
+echo \Illuminate\Support\Facades\Artisan::output();
+echo "Config cleared!";
