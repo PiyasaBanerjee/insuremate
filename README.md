@@ -1,34 +1,48 @@
-# Insurance Management System
+# InsureMate - Insurance Management System
+
+## About the Project
+
+InsureMate is a web-based Insurance Management System developed using Laravel, PHP, MySQL, and Bootstrap.
+
+The system allows users to explore insurance plans, purchase policies, manage policies, submit claims, and handle renewals. An admin panel is provided to manage users, categories, plans, policies, claims, payments, and other insurance-related activities.
+
+## Technologies Used
+
+- PHP
+- Laravel
+- MySQL
+- HTML5
+- CSS3
+- Bootstrap
+- JavaScript
 
 ## Setup Instructions
 
-1.  **Start XAMPP**: Ensure Apache and MySQL are running.
-2.  **Database**: The database `insurance_management` should have been created and migrated automatically.
-3.  **Seed Data**:
-    Run the following command to create the default Admin user and categories:
-    ```bash
-    php artisan db:seed --class=AdminUserSeeder
-    ```
-4.  **Run Application**:
-    Open a terminal in this directory and run:
-    ```bash
-    php artisan serve
-    ```
-5.  **Access the App**: http://127.0.0.1:8000
+### 1. Start XAMPP
 
-## Login Credentials
+Start:
 
-### Admin Panel
-- **URL**: http://127.0.0.1:8000/admin/login
-- **Email**: `admin@insurance.com`
-- **Password**: `password`
+- Apache
+- MySQL
 
-### User Access
-- **URL**: http://127.0.0.1:8000/register
-- Register a new account to purchase policies.
+### 2. Create the Database
 
-## Features Implemented
-- **Landing Page**: View insurance categories.
-- **User Dashboard**: Manage policies, file claims, renew policies.
-- **Admin Panel**: Manage categories and plans.
-- **Claims & Renewals**: Full flows implemented.
+Create a MySQL database named:
+
+`insurance_management`
+
+If your MySQL server uses port `3307`, configure the `.env` file accordingly.
+
+### 3. Configure Environment
+
+Copy `.env.example` to `.env` and configure your database settings.
+
+Example:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3307
+DB_DATABASE=insurance_management
+DB_USERNAME=root
+DB_PASSWORD=
