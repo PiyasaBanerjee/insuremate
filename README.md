@@ -1,3 +1,6 @@
+## Developer
+
+Developed by Piyasa Banerjee.
 # InsureMate - Insurance Management System
 
 ## About the Project
